@@ -357,6 +357,9 @@ footer .container .ofinity {
   }
 }
 @media (max-width: 900px){
+  .hero .text{
+    width: 100%;
+  }
     .hero .container{
         flex-direction: column;
         text-align: center;
