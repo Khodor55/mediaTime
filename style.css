@@ -1,0 +1,394 @@
+:root {
+  --main-color: #0050c8;
+  --main-hover-color: #09306b;
+  --p-color: #545050;
+  --text-color: #000;
+  --error-color: rgb(255, 42, 5);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  list-style: none;
+  font-family: sans-serif;
+}
+body {
+  background-color: white;
+  font-size: 18px;
+}
+a {
+  text-decoration: none;
+  color: var(--p-color);
+}
+.container {
+  width: 90%;
+  margin: 0 auto;
+}
+img {
+  width: 100%;
+  height: 100%;
+}
+button {
+  border: 0;
+  background-color: var(--main-color);
+  color: white;
+  padding: 10px;
+  font-size: 15px;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: 0.4s;
+}
+button:hover {
+  background-color: var(--main-hover-color);
+}
+/* ==header */
+header {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  background-color: white;
+  z-index: 2;
+}
+header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+}
+header .container .logo {
+  width: 200px;
+}
+header .container nav {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+header .container nav a {
+  text-transform: capitalize;
+  padding: 10px;
+  border-radius: 20px;
+  transition: 0.5s;
+}
+header .container nav a:hover {
+  color: var(--main-color);
+  background-color: #38383817;
+}
+header .container .icons {
+  display: flex;
+  gap: 10px;
+}
+/* ==hero */
+.hero {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+}
+.hero .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.hero .text {
+  display: flex;
+  flex-direction: column;
+  width: 500px;
+}
+.hero .text h1 {
+  font-size: 42px;
+  color: var(--main-color);
+  font-weight: bold;
+}
+.hero .text p {
+  font-size: 18px;
+  margin-top: 20px;
+  color: var(--p-color);
+}
+
+.hero .text .btns {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+.w_b {
+  width: 40px;
+  border-radius: 50%;
+}
+.hero .img {
+  width: 300px;
+  padding: 20px;
+  border-radius: 50%;
+  /* border: 1px solid var(--main-color); */
+  animation-name: shadow;
+  animation-duration: 2s;
+  animation-delay: 1s;
+  animation-iteration-count: infinite;
+  overflow: hidden;
+  transition: 0.5s;
+}
+@keyframes shadow {
+  0% {
+    box-shadow: none;
+  }
+  50% {
+    box-shadow: 0px 0px 30px var(--main-color);
+  }
+  100% {
+    box-shadow: none;
+  }
+}
+.hero .img:hover {
+  box-shadow: 0px 0px 30px var(--main-color);
+}
+/* ==featured */
+.featured {
+  margin-bottom: 20px;
+}
+.featured .container {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  /* border: 1px solid var(--main-color); */
+  padding: 20px;
+  border-radius: 20px;
+  background: rgb(238, 238, 238);
+}
+.featured .container .pource {
+  width: 100%;
+  background-color: rgba(145, 145, 145, 0.15);
+  position: relative;
+  height: 10px;
+  border-radius: 20px;
+  overflow: hidden;
+}
+.featured .container .pource h3 {
+  position: absolute;
+  top: -30px;
+  opacity: 0.4;
+  color: var(--p-color);
+}
+
+.featured .container .card h3 {
+  opacity: 0.3;
+  margin-right: 20px;
+}
+.featured .container .pource .value {
+  height: 100%;
+  background-color: #0050c8;
+  width: 25%;
+}
+.featured .container .card .text {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.doctors .container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+.doctors .container .card {
+  width: 200px;
+}
+.doctors .container .card .img {
+  height: 300px;
+
+  overflow: hidden;
+}
+.doctors .container .card .img:hover img {
+  transition: 0.4s;
+}
+.doctors .container .card .img:hover img {
+  scale: 1.1;
+}
+.doctors .container .card .text {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  margin-top: 10px;
+}
+.doctors .container .card .text h1 {
+  font-size: 16px;
+  text-transform: capitalize;
+  color: var(--main-color);
+}
+.doctors .container .card .text h1 span {
+  color: var(--p-color);
+  opacity: 0.5;
+}
+.doctors .container .card .text P {
+  font-size: 12px;
+  color: var(--p-color);
+}
+.doctors .container .card .more {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  padding: 10px;
+  border-radius: 50%;
+}
+.doctors .container .card .more span {
+  color: white;
+  color: var(--main-color);
+  border-radius: 50%;
+  font-size: 34px;
+  width: 400px;
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+/* ==reservation */
+.reservation {
+  margin-top: 30px;
+}
+.reservation .container {
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.reservation .container .text {
+  width: 55%;
+  display: flex;
+  flex-direction: column;
+}
+.reservation .container .text h2 {
+  color: var(--p-color);
+  text-transform: capitalize;
+}
+.reservation .container .text P {
+  margin-top: 20px;
+  opacity: 0.5;
+}
+.reservation .container .text a {
+  margin-top: 20px;
+}
+.reservation .container .img {
+  width: 200px;
+}
+/* ==footer */
+footer {
+  background-color: var(--text-color);
+  padding: 30px;
+}
+footer a {
+  color: white;
+  opacity: 0.7;
+  transition: 0.3s;
+}
+footer a:hover {
+  opacity: 1;
+}
+footer .container .ofinity a:hover {
+  transform: translateX(10px);
+  opacity: 1;
+}
+footer .container {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+}
+footer .container .logo .img {
+  width: 200px;
+}
+footer .container .logo .icons {
+  width: 100%;
+  margin-top: 5px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 10px;
+}
+footer .container .logo .icons a {
+  background-color: var(--main-color);
+  width: 50px;
+  text-align: center;
+  padding: 10px;
+  border-radius: 20px;
+}
+footer .container h2 {
+  color: var(--p-color);
+  text-transform: capitalize;
+}
+footer .container .ofinity {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.openMenuBtn {
+  display: none;
+}
+.closeMenuBtn {
+  display: none;
+}
+@media (max-width: 1100px) {
+  .openMenuBtn {
+    display: block;
+  }
+  .closeMenuBtn {
+    display: block;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 22px;
+    cursor: pointer;
+  }
+  header .container nav {
+    position: fixed;
+    top: -700px;
+    right: 0;
+    left: 0;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    transition: 0.5s;
+  }
+  header .container nav.active{
+    top: 0;
+  }
+}
+@media (max-width: 900px){
+    .hero .container{
+        flex-direction: column;
+        text-align: center;
+        justify-content: center;
+        gap: 20px;
+        margin-top: 100px;
+    }
+    .hero .container .btns{
+        justify-content: center;
+    }
+    .featured .container .card h3 {
+        font-size: 18px;
+    }
+    .reservation .container {
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        gap: 30px;
+    }
+    footer .container {
+        flex-direction: column;
+        gap: 20px
+        ;
+    }
+    
+} 
+@media (max-width: 600px){
+    header .container{
+        flex-direction: column;
+        gap: 10px;
+    }
+    .hero{
+        margin-top: 100px;
+    }
+}
